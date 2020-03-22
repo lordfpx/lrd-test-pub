@@ -11,16 +11,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - id: publish
-        uses: actions/checkout@v1
-        uses: actions/setup-node@v1
-          with:
-            node-version: 12.13.0
-          run: npm install
-          run: npm run build
-          run: npm test
-          uses: JS-DevTools/npm-publish@v1
-          with:
-            token: ${{ secrets.NPM_TOKEN }}
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12.13.0
+      - run: npm install
+      - run: npm run build
+      - run: npm test
+      - uses: JS-DevTools/npm-publish@v1
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
 
       - if: steps.publish.type != 'none'
         run: |
