@@ -20,7 +20,8 @@ jobs:
         run: npm run build
       - name: Test build
         run: npm test
-      - uses: JS-DevTools/npm-publish@v1
+      - id: publish
+        uses: JS-DevTools/npm-publish@v1
         with:
           token: ${{ secrets.NPM_TOKEN }}
       - if: steps.publish.type != 'none'
