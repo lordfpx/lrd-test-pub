@@ -4,19 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "release": "np"
-  },
-  "np": {
-    "anyBranch": false,
-    "cleanup": true,
-    "tests": false,
-    "releaseDraft": true
+    "test": "echo \"Error: no test specified\"",
+    "build": "echo \"build\""
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "np": "^5.1.3"
-  }
+  "devDependencies": {}
 }
